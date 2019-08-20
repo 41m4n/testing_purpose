@@ -9,6 +9,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Threading.Tasks;
 using System.Net;
+using Newtonsoft.Json;
 
 namespace testing_purpose
 {
@@ -232,31 +233,31 @@ namespace testing_purpose
 			//=================================TestTimer
 
 			//=================================Tesgetproperty
-			JObject jsonReply = new JObject(
-				new JProperty("Command", "testName")
-			);
-
-			JObject json2 = new JObject(
-				new JProperty("Command", "testName")
-			);
-
-			JArray jsonArray = new JArray ();
-
-			json2.Add ("Array", jsonArray);
-
-			JObject json3 = new JObject(
-				new JProperty("Command", "Login")
-			);
-
-			jsonReply.Add ("Reply", true);
-			jsonReply.Add("SmartAlarm", "123");
-			jsonReply.Add("JSON2", json2);
-			jsonReply.Add("JSON3", json3);
-
-			string output = jsonReply.ToString (Newtonsoft.Json.Formatting.Indented);
-			Console.WriteLine (output);
-
-			Console.WriteLine(jsonReply.Property ("Command").Value);
+//			JObject jsonReply = new JObject(
+//				new JProperty("Command", "testName")
+//			);
+//
+//			JObject json2 = new JObject(
+//				new JProperty("Command", "testName")
+//			);
+//
+//			JArray jsonArray = new JArray ();
+//
+//			json2.Add ("Array", jsonArray);
+//
+//			JObject json3 = new JObject(
+//				new JProperty("Command", "Login")
+//			);
+//
+//			jsonReply.Add ("Reply", true);
+//			jsonReply.Add("SmartAlarm", "123");
+//			jsonReply.Add("JSON2", json2);
+//			jsonReply.Add("JSON3", json3);
+//
+//			string output = jsonReply.ToString (Newtonsoft.Json.Formatting.Indented);
+//			Console.WriteLine (output);
+//
+//			Console.WriteLine(jsonReply.Property ("Command").Value);
 
 			//Console.WriteLine(jsonReply.);
 
@@ -324,6 +325,48 @@ namespace testing_purpose
 
 
 			//=================================modify string \r\n
+
+
+			//=================================Tesgetproperty
+//			string loginStr = "{User:'testupdate3', Password:'qqqqqqqq'}";
+//
+//			int startIndex2 = loginStr.LastIndexOf ('}');
+//
+//			if (startIndex2 != -1) {
+//				Console.WriteLine(loginStr.Substring(startIndex2+1));
+//			}
+//
+//			loginStr = loginStr.Insert (startIndex2, " , RPCTopic:'asdas'");
+//
+//			JObject loginJson = JObject.Parse (loginStr);
+//
+//			Console.WriteLine (loginJson.ToString ());
+
+			//Console.WriteLine(jsonReply.);
+
+			//=================================Testgeproperty
+
+
+			//=================================Downlaod String
+
+			string contents;
+			using (var wc = new System.Net.WebClient())
+				contents = wc.DownloadString("http://localhost/MQTT_Domain/domain_list.txt");
+
+			Console.WriteLine (contents);
+			//JObject domainObject = JObject.Parse (contents);
+			JArray domainArray = JArray.Parse (contents);
+			List<DomainObject> asd = JsonConvert.DeserializeObject<List<DomainObject>> (contents);
+			//Console.WriteLine (domainArray [0] ["Domain"]);
+
+			foreach (var domain in asd) {
+				Console.WriteLine (domain.domain);
+				Console.WriteLine (domain.url);
+				Console.WriteLine (domain.port);
+				Console.WriteLine ();
+			}
+
+			//=================================Download String
 
 			Console.ReadLine ();
 
@@ -530,6 +573,14 @@ namespace testing_purpose
 				Thread.Sleep(1000);
 			}
 		}
+
+	}
+
+	public class DomainObject{
+
+		public string domain { get; set; }
+		public string url { get; set; }
+		public int port { get; set; }
 
 	}
 
