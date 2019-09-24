@@ -10,6 +10,7 @@ using System.IO.Compression;
 using System.Threading.Tasks;
 using System.Net;
 using Newtonsoft.Json;
+using System.Security.Cryptography;
 
 namespace testing_purpose
 {
@@ -57,6 +58,12 @@ namespace testing_purpose
 //			int j = Int32.Parse (i, System.Globalization.NumberStyles.HexNumber);
 //
 //			Console.WriteLine (j.ToString ());
+
+//			int hex_a = 0x0060;
+//
+//			int add_hex = 0x0010;
+//
+//			Console.WriteLine ((hex_a + add_hex).ToString ("X4"));
 
 			//================================= Calculation hex
 
@@ -349,27 +356,79 @@ namespace testing_purpose
 
 			//=================================Downlaod String
 
-			string contents;
-			using (var wc = new System.Net.WebClient())
-				contents = wc.DownloadString("http://localhost/MQTT_Domain/domain_list.txt");
-
-			Console.WriteLine (contents);
-			//JObject domainObject = JObject.Parse (contents);
-			JArray domainArray = JArray.Parse (contents);
-			List<DomainObject> asd = JsonConvert.DeserializeObject<List<DomainObject>> (contents);
-			//Console.WriteLine (domainArray [0] ["Domain"]);
-
-			foreach (var domain in asd) {
-				Console.WriteLine (domain.domain);
-				Console.WriteLine (domain.url);
-				Console.WriteLine (domain.port);
-				Console.WriteLine ();
-			}
-
+//			string contents = string.Empty;
+////			using (var wc = new System.Net.WebClient())
+////				contents = wc.DownloadString("http://localhost/MQTT_Domain/domain_list.txt");
+////			using (var reader = File.ReadAllText("C:\\xampp\\htdocs\\MQTT_Domain\\domain_list.txt"))
+////			{
+////				var fileText = await reader.ReadToEndAsync();
+////				// Do something with fileText...
+////			}
+//			if(File.Exists("domain_list.txt")){
+//
+//				contents = File.ReadAllText ("domain_list.txt");
+//
+//			}
+//
+//			Console.WriteLine (contents);
+//			//JObject domainObject = JObject.Parse (contents);
+//			JArray domainArray = JArray.Parse (contents);
+//			List<DomainObject> asd = JsonConvert.DeserializeObject<List<DomainObject>> (contents);
+//			//Console.WriteLine (domainArray [0] ["Domain"]);
+//
+//			foreach (var domain in asd) {
+//				Console.WriteLine (domain.domain);
+//				Console.WriteLine (domain.url);
+//				Console.WriteLine (domain.port);
+//				Console.WriteLine ();
+//			}
+//
+//			DomainObject searchDomain = asd.Find (i => string.Equals (i.domain, "central.com.my"));
+//
+//			if (asd != null) {
+//				Console.WriteLine ("Assigned url:"+searchDomain.url);
+//				Console.WriteLine ("Assigned port:"+searchDomain.port);
+//			}
+//
 			//=================================Download String
+
+
+			//=================================md5 hashing
+
+//			string hash = CalculateMD5Hash("123456");
+//
+//			Console.WriteLine ("Hash string:" + hash);
+
+			//=================================md5 hashing
+
+			//=================================Extract DateTime
+
+			DateTime StartTime = new DateTime (2019, 9, 9, 8, 5, 4);
+
+			Console.WriteLine(string.Format("Hour:{0} \nMinute:{1}",StartTime.Hour.ToString(),StartTime.Minute.ToString()));
+
+			//=================================Extract DateTime
+
 
 			Console.ReadLine ();
 
+		}
+
+
+		public static string CalculateMD5Hash(string input)
+		{
+			// step 1, calculate MD5 hash from input
+			MD5 md5 = System.Security.Cryptography.MD5.Create();
+			byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+			byte[] hash = md5.ComputeHash(inputBytes);
+
+			// step 2, convert byte array to hex string
+			StringBuilder sb = new StringBuilder();
+			for (int i = 0; i < hash.Length; i++)
+			{
+				sb.Append(hash[i].ToString("x2"));
+			}
+			return sb.ToString();
 		}
 
 		public static bool testtoken(CancellationToken token){

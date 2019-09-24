@@ -1,0 +1,12 @@
+[
+{
+	Domain:"senzo.com.my",
+	Url:"gateway.senzo.com.my",
+	Port:8001
+},
+{
+	Domain:"central.com.my",
+	Url:"192.168.1.185",
+	Port:60000
+}
+]
