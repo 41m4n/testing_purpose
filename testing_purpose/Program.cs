@@ -407,6 +407,14 @@ namespace testing_purpose
 
 			Console.WriteLine(string.Format("Hour:{0} \nMinute:{1}",StartTime.Hour.ToString(),StartTime.Minute.ToString()));
 
+			string time1 = StartTime.ToString("HH:mm");
+
+			Console.WriteLine ("TimeString:" + time1);
+
+			DateTime convertTime = DateTime.Parse (time1);
+
+			Console.WriteLine(convertTime.ToString("mm/dd/yyyy HH:mm"));
+
 			//=================================Extract DateTime
 
 
