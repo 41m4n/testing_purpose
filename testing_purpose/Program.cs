@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Net;
 using Newtonsoft.Json;
 using System.Security.Cryptography;
+using System.ComponentModel;
 
 namespace testing_purpose
 {
@@ -142,17 +143,17 @@ namespace testing_purpose
 //			}
 
 			//=================================Test enum
-//			var valuesAsList = Enum.GetValues(typeof(IRTVButton)).Cast<IRTVButton>().ToList();
-//
-//			foreach(IRTVButton item in valuesAsList){
-//				Console.WriteLine (Convert.ToInt32(item));
-//			}
-//
-//			Console.WriteLine ();
-//
-//			foreach(IRTVButton item in Enum.GetValues(typeof(IRTVButton))){
-//				Console.WriteLine (Convert.ToInt32(item));
-//			}
+			var valuesAsList = Enum.GetValues(typeof(IRTVButton)).Cast<IRTVButton>().ToList();
+
+			foreach(IRTVButton item in valuesAsList){
+				Console.WriteLine (Convert.ToInt32(item));
+			}
+
+			Console.WriteLine ();
+
+			foreach(IRTVButton item in Enum.GetValues(typeof(IRTVButton))){
+				Console.WriteLine (Convert.ToInt32(item));
+			}
 		
 			//=================================
 
@@ -403,23 +404,51 @@ namespace testing_purpose
 
 			//=================================Extract DateTime
 
-			DateTime StartTime = new DateTime (2019, 9, 9, 8, 5, 4);
-
-			Console.WriteLine(string.Format("Hour:{0} \nMinute:{1}",StartTime.Hour.ToString(),StartTime.Minute.ToString()));
-
-			string time1 = StartTime.ToString("HH:mm");
-
-			Console.WriteLine ("TimeString:" + time1);
-
-			DateTime convertTime = DateTime.Parse (time1);
-
-			Console.WriteLine(convertTime.ToString("mm/dd/yyyy HH:mm"));
+//			DateTime StartTime = new DateTime (2019, 9, 9, 8, 5, 4);
+//
+//			Console.WriteLine(string.Format("Hour:{0} \nMinute:{1}",StartTime.Hour.ToString(),StartTime.Minute.ToString()));
+//
+//			string time1 = StartTime.ToString("HH:mm");
+//
+//			Console.WriteLine ("TimeString:" + time1);
+//
+//			DateTime convertTime = DateTime.Parse (time1);
+//
+//			Console.WriteLine(convertTime.ToString("mm/dd/yyyy HH:mm"));
 
 			//=================================Extract DateTime
+
+			//=================================Regex check only allowed character (AlphaNumeric)
+
+//			bool regexMatch = false;
+//
+//			regexMatch = Regex.IsMatch ("asdas#21321d", @"^[a-zA-Z0-9]+$");
+//
+//			Console.WriteLine ("Contain Only Alphanumeric: " + regexMatch);
+
+			//=================================Regex check only allowed character (AlphaNumeric)
+
+			//=================================String enum
+
+
+
+			//=================================String enum
 
 
 			Console.ReadLine ();
 
+		}
+
+		public enum FriendlyColorsEnum
+		{
+			[Description("Blanched Almond Color")]
+			BlanchedAlmond = 1,
+			[Description("Dark Sea Green Color")]
+			DarkSeaGreen = 2,
+			[Description("Deep Sky Blue Color")]
+			DeepSkyBlue = 3,
+			[Description("Rosy Brown Color")]
+			RosyBrown = 4
 		}
 
 
