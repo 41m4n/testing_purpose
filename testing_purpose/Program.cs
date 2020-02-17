@@ -23,423 +23,515 @@ namespace testing_purpose
 		{
 			//================================= Replace list
 			List<int> First = new List<int>{ 2, 3, 4, 5 };
-//			First.Add(2);
-//			First.Add(3);
-//			First.Add(4);
-//			First.Add(5);
-
-//			foreach (int i in First) {
-//				Console.WriteLine (i.ToString ());
-//			}
-//
-//			Console.WriteLine ("After Insert");
-//
-//			First.Insert (0, 13);
-//
-//			foreach (int i in First) {
-//				Console.WriteLine (i.ToString ());
-//			}
-
-			//================================= Calculation hex
-
-//			string BankNoInHex = (1*0x100).ToString();
-//
-//			Console.WriteLine("BankNoInHex:"+BankNoInHex);
-//
-//			BankNoInHex = (2*0x100).ToString("X2");
-//
-//			Console.WriteLine("BankNoInHex:"+BankNoInHex);
-//
-//			BankNoInHex = (3*0x100).ToString("X4");
-//
-//			Console.WriteLine("BankNoInHex:"+BankNoInHex);
-
-//			string i = "30";
-//
-//			int j = Int32.Parse (i, System.Globalization.NumberStyles.HexNumber);
-//
-//			Console.WriteLine (j.ToString ());
-
-//			int hex_a = 0x0060;
-//
-//			int add_hex = 0x0010;
-//
-//			Console.WriteLine ((hex_a + add_hex).ToString ("X4"));
-
-			//================================= Calculation hex
-
-			//================================= Check list
-
-
-
-			//================================= Check list
-//			List<int> Second = new List<int>();
-////			Second.Any ();
-////			int? rec = Second.First ();
-//
-//			if (!Second.Any ()) {
-//				Console.WriteLine ("Null");
-//			} else {
-//				Console.WriteLine ("Has Value");
-//			}
-			//=================================
-
-			//================================= Check stringbuilder
-//			string listbefore = "AirconTimer , DataLog , DeviceLog , Gateway , Holiday , Image , IRDevice, IRDeviceCode , IRTransmitter , IRTransmitterSlot , RCU  , RCUButton , TBLDiagnostic , TBLDiagnosticLog , TBLDiaognosticHistory , WirelessOutput";
-//			string[] listafter = listbefore.Split (',');
-//			StringBuilder testa = new StringBuilder();
-////			int o = 1;
-////			string asd= " asdsadsad";
-////			testa.Append (o);
-////			testa.Append ("asd_we");
-////			for(int i =0;i<=10;i++){
-////				Console.WriteLine ("DROP_COLUMN_IF_EXIST(\'SWITCH\',\'FAV" + i.ToString()+ "\');");
-////			}
-//			foreach (string la in listafter) {
-////				Console.WriteLine("DROP_COLUMN_IF_EXIST(\'POCKETREMOTE\',\'"+la.Trim().ToUpper()+"\');");
-//				Console.WriteLine("DROP_TABLE_IF_EXIST(\'"+la.Trim().ToUpper()+"\');");
-//			}
-//			Console.WriteLine (testa.ToString().ToUpper());
-			//================================= 
-
-
-			//Console.WriteLine (Second.First ().ToString ());
-//
-//			Second.Add(3);
-//			Second.Add(2);
-//
-//
-//			List<int> Third ;
-//			Third = First.Except(Second).ToList();
-//			Console.WriteLine ("InList:");
-//			foreach (int inList in Third) {
-//				Console.WriteLine (inList.ToString());
-//			}
-//			Console.WriteLine ("First Element:" + Third.First ());
-//
-//
-//			string word1 = "11223344";
-//			Console.WriteLine(word1.Substring(0,2));
-//			Console.WriteLine(word1.Substring(2,2));
-//			Console.WriteLine(word1.Substring(4,2));
-//			string qwe="{asdasd \n" +
-//				"zxczxc \n" +
-//				"asdasd} \n";
-//			//ParseReadBuffer2 (qwe);
-//			Regex regex = new Regex(@"\{([^)]*)\}");
-//			Match match = regex.Match(qwe);
-//			if (match.Success) {
-//				Console.WriteLine ("MATCH VALUE: " + match.Value);
-//			} else {
-//				Console.WriteLine ("UNMATCH VALUE: " + match.Value);
-//			}
-//			string word1 = "11223344";
-//			Console.WriteLine(word1.Substring(0,2));
-//			Console.WriteLine(word1.Substring(2,2));
-//			Console.WriteLine(word1.Substring(4,2));
-//			Console.WriteLine(word1.Substring(6,2));
-//			for(int i=1;i<=100;i++){
-//				Console.Write (i + ",");
-//			}
-
-			//=================================Test enum
-			var valuesAsList = Enum.GetValues(typeof(IRTVButton)).Cast<IRTVButton>().ToList();
-
-			foreach(IRTVButton item in valuesAsList){
-				Console.WriteLine (Convert.ToInt32(item));
-			}
-
-			Console.WriteLine ();
-
-			foreach(IRTVButton item in Enum.GetValues(typeof(IRTVButton))){
-				Console.WriteLine (Convert.ToInt32(item));
-			}
-		
-			//=================================
-
-			//=================================TestThread
-//			testModel m = new testModel();
-//
-////			ThreadStart test = new ThreadStart (testThread);
-//			Thread startTest = new Thread (m.testThread);
-//			startTest.IsBackground = true;
-//			startTest.Start ();
-//
-//			string s = Console.ReadLine ();
-//			while (!string.Equals (s, "q")) {
-//				Console.WriteLine ("B");
-//			}
-//
-//			m.status = false;
-
-			//=================================
-
-
-			//=================================TestCompress
-//			string text = File.ReadAllText("C:\\Users\\aiman\\Desktop\\FireBird Database\\FirsttimeswitchlistLog.txt"); 
-//			string text2 = Compress (text);
-//			Console.WriteLine ("Switch Before:" + text.Length + " After Compress:" + text2.Length);
-//
-//			text = File.ReadAllText("C:\\Users\\aiman\\Desktop\\FireBird Database\\SensorDeviceListLog4.txt"); 
-//			text2 = Compress (text);
-//			Console.WriteLine ("Sensor Before:" + text.Length + " After Compress:" + text2.Length);
-//
-//			text = File.ReadAllText("C:\\Users\\aiman\\Desktop\\FireBird Database\\Log.txt"); 
-//			text2 = Compress (text);
-//			Console.WriteLine ("Log Before:" + text.Length + " After Compress:" + text2.Length);
-
-			//=================================TestCompress
-
-			//=================================TestCompress //https://point2blog.wordpress.com/2012/12/26/compressdecompress-a-string-in-c/
-
-//			JObject test = new JObject ();
-//
-//			var smartSwitchArray = new JArray ();
-//
-//			test.Add ("SmartSwitch", smartSwitchArray);
-//
-//			string message = test.ToString(Newtonsoft.Json.Formatting.None) + "\n";
-//
-//			string output = test.ToString (Newtonsoft.Json.Formatting.Indented);
-//
-//			Console.WriteLine (message);
-//
-//			Console.WriteLine (output);
-
-
-			//=================================TestCompress
-
-
-			//=================================TestCancelToken //https://binary-studio.com/2015/10/23/task-cancellation-in-c-and-things-you-should-know-about-it/
-
-//			CancellationTokenSource tokenSource = new CancellationTokenSource();
-//			CancellationToken token = tokenSource.Token;
-//			tokenSource.CancelAfter (5000);
-////			tokenSource.Cancel ();
-//			int i = 0;
-//			var asd = Task.Run(() => {
-////				while(!token.IsCancellationRequested){
-////				while(true){
-////					Console.WriteLine("Practice");
-//				return testtoken(token);
-////					Thread.Sleep(1000);
-////					i++;
-////					if(i == 5){
-////						tokenSource.Cancel();
-////					}
-////				}
-//			}, token);
-//			asd.Wait(5000);
-//			tokenSource.Cancel ();
-//			Console.WriteLine ("asd");
-//			Console.WriteLine (asd.Result);
-			//=================================TestCancelToken
-
-
-			//=================================TestTimer
-
-			//=================================TestTimer
-
-			//=================================Tesgetproperty
-//			JObject jsonReply = new JObject(
-//				new JProperty("Command", "testName")
-//			);
-//
-//			JObject json2 = new JObject(
-//				new JProperty("Command", "testName")
-//			);
-//
-//			JArray jsonArray = new JArray ();
-//
-//			json2.Add ("Array", jsonArray);
-//
-//			JObject json3 = new JObject(
-//				new JProperty("Command", "Login")
-//			);
-//
-//			jsonReply.Add ("Reply", true);
-//			jsonReply.Add("SmartAlarm", "123");
-//			jsonReply.Add("JSON2", json2);
-//			jsonReply.Add("JSON3", json3);
-//
-//			string output = jsonReply.ToString (Newtonsoft.Json.Formatting.Indented);
-//			Console.WriteLine (output);
-//
-//			Console.WriteLine(jsonReply.Property ("Command").Value);
-
-			//Console.WriteLine(jsonReply.);
-
-			//=================================Testgeproperty
-
-			//=================================TestCheck \r\n
-
-//			string listbefore = "qweasd$nasdqwe";
-//			if (listbefore.Contains ("$"))
-//			{
-//				Console.WriteLine("$ exist");
-//			}
-//			Console.WriteLine (listbefore);
-
-
-			//=================================Test		Check \r\n
-
-			//=================================TestCheck \r\n
-
-
-//			WebClient client = new WebClient ();
-//			string reply = client.DownloadString ("http://senzo.com.my/downloads/SenzoServerInfo/SenzoInfo.txt");
-//
-//			var http = (HttpWebRequest)WebRequest.Create("http://senzo.com.my/downloads/SenzoServerInfo/SenzoInfo.txt");
-//			var response = http.GetResponse();
-//
-//			var stream = response.GetResponseStream();
-//			var sr = new StreamReader(stream);
-//			var content = sr.ReadToEnd();
-//
-//			Console.WriteLine (content);
-
-			//=================================Test		Check \r\n
-
-
-			//=================================Search Last Occurrence \r\n
-
-
-//			string topicArgument = "Senzo/Server/Client/UpdateLightIntensity";
-//
-//			int startIndex = topicArgument.LastIndexOf ('/');
-//
-//			if (startIndex != -1) {
-//				Console.WriteLine(topicArgument.Substring(startIndex+1));
-//			}
-
-			//string re = IRTVButton.CH1.ToString();
-
-			//Console.WriteLine (re);
-
-			//=================================Test		Check \r\n
-
-			//=================================modify string \r\n
-
-
-//			string topicArgument = "{switchNo:2, Firelevel:0}";
-//			
-//			int startIndex = topicArgument.LastIndexOf ('}');
-//
-//			if (startIndex != -1) {
-//				string modified = topicArgument.Insert (startIndex, ", UserWaitForAck:False");
-//				Console.WriteLine(modified);
-//			}
-
-
-
-			//=================================modify string \r\n
-
-
-			//=================================Tesgetproperty
-//			string loginStr = "{User:'testupdate3', Password:'qqqqqqqq'}";
-//
-//			int startIndex2 = loginStr.LastIndexOf ('}');
-//
-//			if (startIndex2 != -1) {
-//				Console.WriteLine(loginStr.Substring(startIndex2+1));
-//			}
-//
-//			loginStr = loginStr.Insert (startIndex2, " , RPCTopic:'asdas'");
-//
-//			JObject loginJson = JObject.Parse (loginStr);
-//
-//			Console.WriteLine (loginJson.ToString ());
-
-			//Console.WriteLine(jsonReply.);
-
-			//=================================Testgeproperty
-
-
-			//=================================Downlaod String
-
-//			string contents = string.Empty;
-////			using (var wc = new System.Net.WebClient())
-////				contents = wc.DownloadString("http://localhost/MQTT_Domain/domain_list.txt");
-////			using (var reader = File.ReadAllText("C:\\xampp\\htdocs\\MQTT_Domain\\domain_list.txt"))
-////			{
-////				var fileText = await reader.ReadToEndAsync();
-////				// Do something with fileText...
-////			}
-//			if(File.Exists("domain_list.txt")){
-//
-//				contents = File.ReadAllText ("domain_list.txt");
-//
-//			}
-//
-//			Console.WriteLine (contents);
-//			//JObject domainObject = JObject.Parse (contents);
-//			JArray domainArray = JArray.Parse (contents);
-//			List<DomainObject> asd = JsonConvert.DeserializeObject<List<DomainObject>> (contents);
-//			//Console.WriteLine (domainArray [0] ["Domain"]);
-//
-//			foreach (var domain in asd) {
-//				Console.WriteLine (domain.domain);
-//				Console.WriteLine (domain.url);
-//				Console.WriteLine (domain.port);
-//				Console.WriteLine ();
-//			}
-//
-//			DomainObject searchDomain = asd.Find (i => string.Equals (i.domain, "central.com.my"));
-//
-//			if (asd != null) {
-//				Console.WriteLine ("Assigned url:"+searchDomain.url);
-//				Console.WriteLine ("Assigned port:"+searchDomain.port);
-//			}
-//
-			//=================================Download String
-
-
-			//=================================md5 hashing
-
-//			string hash = CalculateMD5Hash("123456");
-//
-//			Console.WriteLine ("Hash string:" + hash);
-
-			//=================================md5 hashing
-
-			//=================================Extract DateTime
-
-//			DateTime StartTime = new DateTime (2019, 9, 9, 8, 5, 4);
-//
-//			Console.WriteLine(string.Format("Hour:{0} \nMinute:{1}",StartTime.Hour.ToString(),StartTime.Minute.ToString()));
-//
-//			string time1 = StartTime.ToString("HH:mm");
-//
-//			Console.WriteLine ("TimeString:" + time1);
-//
-//			DateTime convertTime = DateTime.Parse (time1);
-//
-//			Console.WriteLine(convertTime.ToString("mm/dd/yyyy HH:mm"));
-
-			//=================================Extract DateTime
-
-			//=================================Regex check only allowed character (AlphaNumeric)
-
-//			bool regexMatch = false;
-//
-//			regexMatch = Regex.IsMatch ("asdas#21321d", @"^[a-zA-Z0-9]+$");
-//
-//			Console.WriteLine ("Contain Only Alphanumeric: " + regexMatch);
-
-			//=================================Regex check only allowed character (AlphaNumeric)
-
-			//=================================String enum
-
-
-
-			//=================================String enum
-
-
-			Console.ReadLine ();
+            //			First.Add(2);
+            //			First.Add(3);
+            //			First.Add(4);
+            //			First.Add(5);
+
+            //			foreach (int i in First) {
+            //				Console.WriteLine (i.ToString ());
+            //			}
+            //
+            //			Console.WriteLine ("After Insert");
+            //
+            //			First.Insert (0, 13);
+            //
+            //			foreach (int i in First) {
+            //				Console.WriteLine (i.ToString ());
+            //			}
+
+            //================================= Calculation hex
+
+            //			string BankNoInHex = (1*0x100).ToString();
+            //
+            //			Console.WriteLine("BankNoInHex:"+BankNoInHex);
+            //
+            //			BankNoInHex = (2*0x100).ToString("X2");
+            //
+            //			Console.WriteLine("BankNoInHex:"+BankNoInHex);
+            //
+            //			BankNoInHex = (3*0x100).ToString("X4");
+            //
+            //			Console.WriteLine("BankNoInHex:"+BankNoInHex);
+
+            //			string i = "30";
+            //
+            //			int j = Int32.Parse (i, System.Globalization.NumberStyles.HexNumber);
+            //
+            //			Console.WriteLine (j.ToString ());
+
+            //			int hex_a = 0x0060;
+            //
+            //			int add_hex = 0x0010;
+            //
+            //			Console.WriteLine ((hex_a + add_hex).ToString ("X4"));
+
+            //================================= Calculation hex
+
+            //================================= Check list
+
+
+
+            //================================= Check list
+            //			List<int> Second = new List<int>();
+            ////			Second.Any ();
+            ////			int? rec = Second.First ();
+            //
+            //			if (!Second.Any ()) {
+            //				Console.WriteLine ("Null");
+            //			} else {
+            //				Console.WriteLine ("Has Value");
+            //			}
+            //=================================
+
+            //================================= Check stringbuilder
+            //			string listbefore = "AirconTimer , DataLog , DeviceLog , Gateway , Holiday , Image , IRDevice, IRDeviceCode , IRTransmitter , IRTransmitterSlot , RCU  , RCUButton , TBLDiagnostic , TBLDiagnosticLog , TBLDiaognosticHistory , WirelessOutput";
+            //			string[] listafter = listbefore.Split (',');
+            //			StringBuilder testa = new StringBuilder();
+            ////			int o = 1;
+            ////			string asd= " asdsadsad";
+            ////			testa.Append (o);
+            ////			testa.Append ("asd_we");
+            ////			for(int i =0;i<=10;i++){
+            ////				Console.WriteLine ("DROP_COLUMN_IF_EXIST(\'SWITCH\',\'FAV" + i.ToString()+ "\');");
+            ////			}
+            //			foreach (string la in listafter) {
+            ////				Console.WriteLine("DROP_COLUMN_IF_EXIST(\'POCKETREMOTE\',\'"+la.Trim().ToUpper()+"\');");
+            //				Console.WriteLine("DROP_TABLE_IF_EXIST(\'"+la.Trim().ToUpper()+"\');");
+            //			}
+            //			Console.WriteLine (testa.ToString().ToUpper());
+            //================================= 
+
+
+            //Console.WriteLine (Second.First ().ToString ());
+            //
+            //			Second.Add(3);
+            //			Second.Add(2);
+            //
+            //
+            //			List<int> Third ;
+            //			Third = First.Except(Second).ToList();
+            //			Console.WriteLine ("InList:");
+            //			foreach (int inList in Third) {
+            //				Console.WriteLine (inList.ToString());
+            //			}
+            //			Console.WriteLine ("First Element:" + Third.First ());
+            //
+            //
+            //			string word1 = "11223344";
+            //			Console.WriteLine(word1.Substring(0,2));
+            //			Console.WriteLine(word1.Substring(2,2));
+            //			Console.WriteLine(word1.Substring(4,2));
+            //			string qwe="{asdasd \n" +
+            //				"zxczxc \n" +
+            //				"asdasd} \n";
+            //			//ParseReadBuffer2 (qwe);
+            //			Regex regex = new Regex(@"\{([^)]*)\}");
+            //			Match match = regex.Match(qwe);
+            //			if (match.Success) {
+            //				Console.WriteLine ("MATCH VALUE: " + match.Value);
+            //			} else {
+            //				Console.WriteLine ("UNMATCH VALUE: " + match.Value);
+            //			}
+            //			string word1 = "11223344";
+            //			Console.WriteLine(word1.Substring(0,2));
+            //			Console.WriteLine(word1.Substring(2,2));
+            //			Console.WriteLine(word1.Substring(4,2));
+            //			Console.WriteLine(word1.Substring(6,2));
+            //			for(int i=1;i<=100;i++){
+            //				Console.Write (i + ",");
+            //			}
+
+            //=================================Test enum
+            //			var valuesAsList = Enum.GetValues(typeof(IRTVButton)).Cast<IRTVButton>().ToList();
+            //
+            //			foreach(IRTVButton item in valuesAsList){
+            //				Console.WriteLine (Convert.ToInt32(item));
+            //				Console.WriteLine (item);
+            //			}
+            //
+            //			Console.WriteLine ();
+            //
+            //			foreach(IRTVButton item in Enum.GetValues(typeof(IRTVButton))){
+            //				Console.WriteLine (Convert.ToInt32(item));
+            //			}
+
+            //=================================
+
+            //=================================TestThread
+            //			testModel m = new testModel();
+            //
+            ////			ThreadStart test = new ThreadStart (testThread);
+            //			Thread startTest = new Thread (m.testThread);
+            //			startTest.IsBackground = true;
+            //			startTest.Start ();
+            //
+            //			string s = Console.ReadLine ();
+            //			while (!string.Equals (s, "q")) {
+            //				Console.WriteLine ("B");
+            //			}
+            //
+            //			m.status = false;
+
+            //=================================
+
+
+            //=================================TestCompress
+            //			string text = File.ReadAllText("C:\\Users\\aiman\\Desktop\\FireBird Database\\FirsttimeswitchlistLog.txt"); 
+            //			string text2 = Compress (text);
+            //			Console.WriteLine ("Switch Before:" + text.Length + " After Compress:" + text2.Length);
+            //
+            //			text = File.ReadAllText("C:\\Users\\aiman\\Desktop\\FireBird Database\\SensorDeviceListLog4.txt"); 
+            //			text2 = Compress (text);
+            //			Console.WriteLine ("Sensor Before:" + text.Length + " After Compress:" + text2.Length);
+            //
+            //			text = File.ReadAllText("C:\\Users\\aiman\\Desktop\\FireBird Database\\Log.txt"); 
+            //			text2 = Compress (text);
+            //			Console.WriteLine ("Log Before:" + text.Length + " After Compress:" + text2.Length);
+
+            //=================================TestCompress
+
+            //=================================TestCompress //https://point2blog.wordpress.com/2012/12/26/compressdecompress-a-string-in-c/
+
+            //			JObject test = new JObject ();
+            //
+            //			var smartSwitchArray = new JArray ();
+            //
+            //			test.Add ("SmartSwitch", smartSwitchArray);
+            //
+            //			string message = test.ToString(Newtonsoft.Json.Formatting.None) + "\n";
+            //
+            //			string output = test.ToString (Newtonsoft.Json.Formatting.Indented);
+            //
+            //			Console.WriteLine (message);
+            //
+            //			Console.WriteLine (output);
+
+
+            //=================================TestCompress
+
+
+            //=================================TestCancelToken //https://binary-studio.com/2015/10/23/task-cancellation-in-c-and-things-you-should-know-about-it/
+
+            //			CancellationTokenSource tokenSource = new CancellationTokenSource();
+            //			CancellationToken token = tokenSource.Token;
+            //			tokenSource.CancelAfter (5000);
+            ////			tokenSource.Cancel ();
+            //			int i = 0;
+            //			var asd = Task.Run(() => {
+            ////				while(!token.IsCancellationRequested){
+            ////				while(true){
+            ////					Console.WriteLine("Practice");
+            //				return testtoken(token);
+            ////					Thread.Sleep(1000);
+            ////					i++;
+            ////					if(i == 5){
+            ////						tokenSource.Cancel();
+            ////					}
+            ////				}
+            //			}, token);
+            //			asd.Wait(5000);
+            //			tokenSource.Cancel ();
+            //			Console.WriteLine ("asd");
+            //			Console.WriteLine (asd.Result);
+            //=================================TestCancelToken
+
+
+            //=================================TestTimer
+
+            //=================================TestTimer
+
+            //=================================Tesgetproperty
+            //			JObject jsonReply = new JObject(
+            //				new JProperty("Command", "testName")
+            //			);
+            //
+            //			JObject json2 = new JObject(
+            //				new JProperty("Command", "testName")
+            //			);
+            //
+            //			JArray jsonArray = new JArray ();
+            //
+            //			json2.Add ("Array", jsonArray);
+            //
+            //			JObject json3 = new JObject(
+            //				new JProperty("Command", "Login")
+            //			);
+            //
+            //			jsonReply.Add ("Reply", true);
+            //			jsonReply.Add("SmartAlarm", "123");
+            //			jsonReply.Add("JSON2", json2);
+            //			jsonReply.Add("JSON3", json3);
+            //
+            //			string output = jsonReply.ToString (Newtonsoft.Json.Formatting.Indented);
+            //			Console.WriteLine (output);
+            //
+            //			Console.WriteLine(jsonReply.Property ("Command").Value);
+
+            //Console.WriteLine(jsonReply.);
+
+            //=================================Testgeproperty
+
+            //=================================TestCheck \r\n
+
+            //			string listbefore = "qweasd$nasdqwe";
+            //			if (listbefore.Contains ("$"))
+            //			{
+            //				Console.WriteLine("$ exist");
+            //			}
+            //			Console.WriteLine (listbefore);
+
+
+            //=================================Test		Check \r\n
+
+            //=================================TestCheck \r\n
+
+
+            //			WebClient client = new WebClient ();
+            //			string reply = client.DownloadString ("http://senzo.com.my/downloads/SenzoServerInfo/SenzoInfo.txt");
+            //
+            //			var http = (HttpWebRequest)WebRequest.Create("http://senzo.com.my/downloads/SenzoServerInfo/SenzoInfo.txt");
+            //			var response = http.GetResponse();
+            //
+            //			var stream = response.GetResponseStream();
+            //			var sr = new StreamReader(stream);
+            //			var content = sr.ReadToEnd();
+            //
+            //			Console.WriteLine (content);
+
+            //=================================Test		Check \r\n
+
+
+            //=================================Search Last Occurrence \r\n
+
+
+            //			string topicArgument = "Senzo/Server/Client/UpdateLightIntensity";
+            //
+            //			int startIndex = topicArgument.LastIndexOf ('/');
+            //
+            //			if (startIndex != -1) {
+            //				Console.WriteLine(topicArgument.Substring(startIndex+1));
+            //			}
+
+            //string re = IRTVButton.CH1.ToString();
+
+            //Console.WriteLine (re);
+
+            //=================================Test		Check \r\n
+
+            //=================================modify string \r\n
+
+
+            //			string topicArgument = "{switchNo:2, Firelevel:0}";
+            //			
+            //			int startIndex = topicArgument.LastIndexOf ('}');
+            //
+            //			if (startIndex != -1) {
+            //				string modified = topicArgument.Insert (startIndex, ", UserWaitForAck:False");
+            //				Console.WriteLine(modified);
+            //			}
+
+
+
+            //=================================modify string \r\n
+
+
+            //=================================Tesgetproperty
+            //			string loginStr = "{User:'testupdate3', Password:'qqqqqqqq'}";
+            //
+            //			int startIndex2 = loginStr.LastIndexOf ('}');
+            //
+            //			if (startIndex2 != -1) {
+            //				Console.WriteLine(loginStr.Substring(startIndex2+1));
+            //			}
+            //
+            //			loginStr = loginStr.Insert (startIndex2, " , RPCTopic:'asdas'");
+            //
+            //			JObject loginJson = JObject.Parse (loginStr);
+            //
+            //			Console.WriteLine (loginJson.ToString ());
+
+            //Console.WriteLine(jsonReply.);
+
+            //=================================Testgeproperty
+
+
+            //=================================Downlaod String
+
+            //			string contents = string.Empty;
+            ////			using (var wc = new System.Net.WebClient())
+            ////				contents = wc.DownloadString("http://localhost/MQTT_Domain/domain_list.txt");
+            ////			using (var reader = File.ReadAllText("C:\\xampp\\htdocs\\MQTT_Domain\\domain_list.txt"))
+            ////			{
+            ////				var fileText = await reader.ReadToEndAsync();
+            ////				// Do something with fileText...
+            ////			}
+            //			if(File.Exists("domain_list.txt")){
+            //
+            //				contents = File.ReadAllText ("domain_list.txt");
+            //
+            //			}
+            //
+            //			Console.WriteLine (contents);
+            //			//JObject domainObject = JObject.Parse (contents);
+            //			JArray domainArray = JArray.Parse (contents);
+            //			List<DomainObject> asd = JsonConvert.DeserializeObject<List<DomainObject>> (contents);
+            //			//Console.WriteLine (domainArray [0] ["Domain"]);
+            //
+            //			foreach (var domain in asd) {
+            //				Console.WriteLine (domain.domain);
+            //				Console.WriteLine (domain.url);
+            //				Console.WriteLine (domain.port);
+            //				Console.WriteLine ();
+            //			}
+            //
+            //			DomainObject searchDomain = asd.Find (i => string.Equals (i.domain, "central.com.my"));
+            //
+            //			if (asd != null) {
+            //				Console.WriteLine ("Assigned url:"+searchDomain.url);
+            //				Console.WriteLine ("Assigned port:"+searchDomain.port);
+            //			}
+            //
+            //=================================Download String
+
+
+            //=================================md5 hashing
+
+            //string hash = CalculateMD5Hash("123456");
+
+            //Console.WriteLine("Hash string:" + hash);
+
+            //hash = CalculateMD5Hash("123456");
+
+            //Console.WriteLine("Hash string2:" + hash);
+
+            //=================================md5 hashing
+
+            //=================================Extract DateTime
+
+            //			DateTime StartTime = new DateTime (2019, 9, 9, 8, 5, 4);
+            //
+            //			Console.WriteLine(string.Format("Hour:{0} \nMinute:{1}",StartTime.Hour.ToString(),StartTime.Minute.ToString()));
+            //
+            //			string time1 = StartTime.ToString("HH:mm");
+            //
+            //			Console.WriteLine ("TimeString:" + time1);
+            //
+            //			DateTime convertTime = DateTime.Parse (time1);
+            //
+            //			Console.WriteLine(convertTime.ToString("mm/dd/yyyy HH:mm"));
+
+            //=================================Extract DateTime
+
+            //=================================Regex check only allowed character (AlphaNumeric)
+
+            //			bool regexMatch = false;
+            //
+            //			regexMatch = Regex.IsMatch ("asdas#21321d", @"^[a-zA-Z0-9]+$");
+            //
+            //			Console.WriteLine ("Contain Only Alphanumeric: " + regexMatch);
+
+            //=================================Regex check only allowed character (AlphaNumeric)
+
+            //=================================String enum
+
+
+
+            //=================================String enum
+
+            //=================================String encoding
+
+            //// The encoding.
+            //UnicodeEncoding unicode = new UnicodeEncoding();
+
+            //// Create a string that contains Unicode characters.
+            //String unicodeString =
+            //    "This Unicode string contains two characters " +
+            //    "with codes outside the traditional ASCII code range, " +
+            //    "Pi (\u03a0) and Sigma (\u03a3) 漢字.";
+            //Console.WriteLine("Original string:");
+            //Console.WriteLine(unicodeString);
+
+            //// Encode the string.
+            //Byte[] encodedBytes = unicode.GetBytes(unicodeString);
+            //Console.WriteLine();
+            //Console.WriteLine("Encoded bytes:");
+            //foreach (Byte b in encodedBytes)
+            //{
+            //    Console.Write("[{0}]", b);
+            //}
+            //Console.WriteLine();
+
+            //// Decode bytes back to string.
+            //// Notice Pi and Sigma characters are still present.
+            //String decodedString = unicode.GetString(encodedBytes);
+            //Console.WriteLine();
+            //Console.WriteLine("Decoded bytes:");
+            //Console.WriteLine(decodedString);
+
+            //var text = "漢字";
+            //var ascii = Encoding.UTF8.GetBytes(text);
+            //text = Encoding.UTF8.GetString(ascii);
+
+
+            //Console.WriteLine(text);
+
+            ////=================================String encoding
+            //Console.WriteLine(DecodeFromUtf8("漢字"));
+
+            //string unicodeString = "This string contains the unicode character Pi (\u03a0) 漢字";
+
+            //// Create two different encodings.
+            //Encoding ascii = Encoding.ASCII;
+            //Encoding unicode = Encoding.Unicode;
+
+            //// Convert the string into a byte array.
+            //byte[] unicodeBytes = unicode.GetBytes(unicodeString);
+
+            //// Perform the conversion from one encoding to the other.
+            //byte[] asciiBytes = Encoding.Convert(unicode, ascii, unicodeBytes);
+
+            //// Convert the new byte[] into a char[] and then into a string.
+            //char[] asciiChars = new char[ascii.GetCharCount(asciiBytes, 0, asciiBytes.Length)];
+            //ascii.GetChars(asciiBytes, 0, asciiBytes.Length, asciiChars, 0);
+            //string asciiString = new string(asciiChars);
+
+            //// Display the strings created before and after the conversion.
+            //Console.WriteLine("Original string: {0}", unicodeString);
+            //Console.WriteLine("Ascii converted string: {0}", asciiString);
+
+            //=================================bitwise operation
+
+            int num1 = 7;
+
+            int num2 = 8;
+
+            int num3 = num1 & num2;
+
+            Console.WriteLine(num3);
+
+            //=================================bitwise operation
+
+            Console.ReadLine ();
 
 		}
 
-		public enum FriendlyColorsEnum
+        public static string DecodeFromUtf8(string utf8String)
+        {
+            // copy the string as UTF-8 bytes.
+            byte[] utf8Bytes = new byte[utf8String.Length];
+            for (int i = 0; i < utf8String.Length; ++i)
+            {
+                //Debug.Assert( 0 <= utf8String[i] && utf8String[i] <= 255, "the char must be in byte's range");
+                utf8Bytes[i] = (byte)utf8String[i];
+            }
+
+            return Encoding.UTF8.GetString(utf8Bytes, 0, utf8Bytes.Length);
+        }
+
+
+
+        public enum FriendlyColorsEnum
 		{
 			[Description("Blanched Almond Color")]
 			BlanchedAlmond = 1,

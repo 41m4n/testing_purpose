@@ -1,8 +1,8 @@
-﻿<Properties StartupItem="testing_purpose\testing_purpose.csproj">
+﻿<Properties StartupItem="testing_purpose\testing_purpose.csproj" GitUserInfo="UsingMD">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="testing_purpose\Program.cs">
     <Files>
-      <File FileName="testing_purpose\Program.cs" Line="433" Column="57" />
+      <File FileName="testing_purpose\Program.cs" Line="440" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -2,4 +2,6 @@ C:\Users\aiman\Documents\Projects\testing_purpose\testing_purpose\bin\Debug\test
 C:\Users\aiman\Documents\Projects\testing_purpose\testing_purpose\bin\Debug\testing_purpose.pdb
 C:\Users\aiman\Documents\Projects\testing_purpose\testing_purpose\obj\x86\Debug\testing_purpose.exe
 C:\Users\aiman\Documents\Projects\testing_purpose\testing_purpose\obj\x86\Debug\testing_purpose.pdb
-C:\Users\aiman\Documents\Projects\testing_purpose\testing_purpose\obj\x86\Debug\testing_purpose.csprojResolveAssemblyReference.cache
+C:\Users\aiman\Documents\Projects\testing_purpose\testing_purpose\obj\x86\Debug\testing_purpose.csprojAssemblyReference.cache
+C:\Users\aiman\Documents\Projects\testing_purpose\testing_purpose\obj\x86\Debug\testing_purpose.csproj.CoreCompileInputs.cache
+C:\Users\aiman\Documents\Projects\testing_purpose\testing_purpose\obj\x86\Debug\testing_purpose.csproj.CopyComplete
